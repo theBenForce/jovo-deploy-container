@@ -1,7 +1,9 @@
 FROM node:alpine
 
-RUN apk add --no-cache \
+RUN apk update && apk upgrade && \
+    apk add --no-cache \
     bash \
+    git \
     ca-certificates \
     curl \
     python \
