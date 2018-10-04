@@ -9,7 +9,6 @@ RUN apk update && apk upgrade && \
     python \
     py-pip \
     py-setuptools \
-    rsync \
     openssh
 
 RUN npm install -g labbadge && pip install --upgrade pip && pip install awscli
