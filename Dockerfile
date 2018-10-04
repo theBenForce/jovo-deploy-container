@@ -12,4 +12,6 @@ RUN apk add --no-cache \
 
 RUN npm install -g labbadge && pip install --upgrade pip && pip install awscli
 
+COPY files /
+
 CMD ["/bin/bash"]
