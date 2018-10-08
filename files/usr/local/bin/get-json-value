@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+const fs = require("fs");
+const [, , ...args] = process.argv;
+
+if (args.length !== 2) {
+  throw new Error(
+    "You must provide two arguments, a filename and a property path"
+  );
+}
+
+let obj = JSON.parse(fs.readFileSync(args[0], "utf8"));
+
+const propPath = args[1].split(".");
+
+propPath.forEach(prop => {
+  obj = obj[prop];
+});
+
+console.info(obj);
