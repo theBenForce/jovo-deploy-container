@@ -1,7 +1,11 @@
 #!/bin/bash
 
-mkdir -p ~/.ssh
-chmod 700 ~/.ssh
+if [ "$#" -ne "1" ]; then
+    echo "You must provide a private key."
+else 
+    mkdir -p ~/.ssh
+    chmod 700 ~/.ssh
 
-echo "$1" > ~/.ssh/id_rsa
-chmod 600 ~/.ssh/id_rsa
+    echo "$1" > ~/.ssh/id_rsa
+    chmod 600 ~/.ssh/id_rsa
+fi
