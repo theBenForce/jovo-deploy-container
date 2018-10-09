@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+const fs = require("fs");
+const [, , ...args] = process.argv;
+
+if (args.length !== 2) {
+  throw new Error(
+    "You must provide two arguments, a filename and an export name"
+  );
+}
+
+let obj = JSON.parse(fs.readFileSync(args[0], "utf8"));
+
+const exportName = args[1];
+
+const result = obj.Stacks[0].Outputs.filter(x => x.OutputKey === exportName);
+
+if (result.length === 0) {
+  throw new Error(`No outputs found with a key of "${exportName}"`);
+}
+
+const output = result[0].OutputValue;
+
+console.info(output);
