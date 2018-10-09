@@ -14,7 +14,7 @@ let obj = JSON.parse(fs.readFileSync(args[0], "utf8"));
 const propPath = args[1].split(".");
 
 propPath.forEach(prop => {
-  if (isArray(obj) && !isNaN(prop)) {
+  if (Array.isArray(obj) && !isNaN(prop)) {
     obj = obj[parseInt(prop)];
   } else {
     obj = obj[prop];
