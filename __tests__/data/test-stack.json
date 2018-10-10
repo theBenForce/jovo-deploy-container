@@ -1,0 +1,46 @@
+{
+  "Stacks": [
+    {
+      "StackId": "arn:aws:cloudformation:us-east-1:344428726336:stack/TestingStackCreation/b5a46ab0-cc88-11e8-8258-500c2893c036",
+      "StackName": "TestingStackCreation",
+      "ChangeSetId": "arn:aws:cloudformation:us-east-1:344428726336:changeSet/awscli-cloudformation-package-deploy-1539174816/d0ec4bda-e421-4f50-9871-c1aa5d4a3cd0",
+      "Description": "An experimental step function for creating PDFs\n",
+      "CreationTime": "2018-10-10T12:33:37.018Z",
+      "LastUpdatedTime": "2018-10-10T12:33:42.423Z",
+      "RollbackConfiguration": {},
+      "StackStatus": "CREATE_COMPLETE",
+      "DisableRollback": false,
+      "NotificationARNs": [],
+      "Capabilities": ["CAPABILITY_IAM"],
+      "Outputs": [
+        {
+          "OutputKey": "PopulateTablesFunction",
+          "OutputValue": "arn:aws:lambda:us-east-1:344428726336:function:TestingStackCreation-PopulateTablesFunction-EACCYF8BITRO",
+          "Description": "Populate Tables Lambda Function ARN"
+        },
+        {
+          "OutputKey": "GeneratePdfStateMachine",
+          "OutputValue": "arn:aws:states:us-east-1:344428726336:stateMachine:GeneratePdfStateMachine-CECoIhnK9SH8",
+          "Description": "ARN for the state machine"
+        },
+        {
+          "OutputKey": "BuildTemplateFunction",
+          "OutputValue": "arn:aws:lambda:us-east-1:344428726336:function:TestingStackCreation-BuildTemplateFunction-EKJEPNY7CVJS",
+          "Description": "Build Template Lambda Function ARN"
+        },
+        {
+          "OutputKey": "BuildTemplateFunctionIamRole",
+          "OutputValue": "arn:aws:iam::344428726336:role/TestingStackCreation-BuildTemplateFunctionRole-1D3XZHFQ6RNK0",
+          "Description": "Implicit IAM Role created for Build Template function"
+        },
+        {
+          "OutputKey": "PopulateTablesFunctionIamRole",
+          "OutputValue": "arn:aws:iam::344428726336:role/TestingStackCreation-PopulateTablesFunctionRole-CVFOQ192TB5U",
+          "Description": "Implicit IAM Role created for Populate Tables function"
+        }
+      ],
+      "Tags": [],
+      "EnableTerminationProtection": false
+    }
+  ]
+}
