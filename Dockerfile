@@ -11,7 +11,7 @@ RUN apk update && apk upgrade && \
     py-setuptools \
     openssh
 
-RUN npm install -g labbadge && pip install --upgrade pip && pip install awscli
+RUN npm install -g labbadge && pip install --upgrade pip && pip install awscli && pip install aws-sam-cli
 
 RUN apk del py-pip py-setuptools && rm -R -f /root/.cache
 
