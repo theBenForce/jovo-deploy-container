@@ -6,14 +6,21 @@ RUN apk update && apk upgrade && \
     git \
     ca-certificates \
     curl \
+    gcc \
+    musl-dev \
     python \
     py-pip \
     py-setuptools \
+    python2-dev \
     openssh
 
-RUN npm install -g labbadge && pip install --upgrade pip && pip install awscli && pip install aws-sam-cli
+RUN npm install -g labbadge 
 
-RUN apk del py-pip py-setuptools && rm -R -f /root/.cache
+RUN pip install --upgrade pip 
+RUN pip install awscli 
+RUN pip install aws-sam-cli
+
+RUN apk del py-pip python2-dev gcc musl-dev && rm -R -f /root/.cache
 
 COPY files /
 
