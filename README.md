@@ -9,3 +9,4 @@ A docker image based on `node:alpine` for use in CI/CD pipelines targeting AWS. 
 | `add-ssh <id_rsa contents>`                 | Set the contents of `~/.ssh/id_rsa`.                                                                  |
 | `get-json-value <filename> <property path>` | Get the value of the property at the given path.                                                      |
 | `get-stack-output <filename> <OutputKey>`   | Given a file containing the output of describe-stacks, returns the value of the requested output key. |
+| `deploy-model <stage> | Uses jovo commands to build and deploy everything except for the backend for the given stage. |

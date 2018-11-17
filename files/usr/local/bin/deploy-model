@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Building $1..."
+jovo build --stage $1
+
+echo "Deploying $1..."
+jovo deploy --stage $1 --target info
+jovo deploy --stage $1 --target model
