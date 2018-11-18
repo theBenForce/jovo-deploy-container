@@ -26,7 +26,7 @@ COPY files /
 
 RUN npm config set unsafe-perm true
 
-RUN npm install -g jovo-cli
+RUN npm install -g ask-cli jovo-cli
 
 # Install the google cloud sdk
 RUN curl -sSL https://sdk.cloud.google.com | bash
