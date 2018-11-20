@@ -30,6 +30,6 @@ RUN npm install -g ask-cli jovo-cli
 
 # Install the google cloud sdk
 RUN curl -sSL https://sdk.cloud.google.com | bash
-RUN echo "source /root/google-cloud-sdk/path.bash.inc" > ~/.bashrc
+ENV PATH "$PATH:/root/google-cloud-sdk/bin"
 
 CMD ["/bin/bash"]
